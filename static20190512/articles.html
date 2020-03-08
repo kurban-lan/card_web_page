@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>优质文章</title>
+<!-- ---------------------------------------------------新闻 库尔班--------------------------------------- -->
+    <style type="text/css">
+        #newContainer{
+
+            width: 1500px;
+            margin: 0px auto;
+            /*background: #CF3;*/
+            /*border: 2px #f00 solid;*/
+            /*height: 100px;*/
+
+        }
+        #newContainer a {text-decoration: none;}
+        .moreAColor a:link{color: #666666;}
+        .moreAColor a:hover{color: #00A971;font-size: 102%;}
+        /*#newContainer .moreAColor a:hover{color: #00A971}*/
+        #newContent{
+            margin:70px auto;
+            width: 1150px;
+            overflow:auto;
+            /*padding-left: 230px;*/
+            /*border: 2px #f00 solid;*/
+        }
+        #newContentLeftBox{
+            float: left;
+            width: 200px;
+
+            /*background: #00d;*/
+        }
+        #newContentLeft{
+            font-family: STkaiti;
+            font-size: 120%;
+            /*border: 2px #f52 solid;*/
+            padding-top: 5px;
+            /*margin-bottom: -1px;*/
+            width: 200px;
+            /*background: #90c;*/
+            border: 1px solid #e7eaf1;
+            border-radius: 8px 8px 0px 0px;
+        }
+        .recommendedToYou{
+            font-size: 150%;
+            font-family: STkaiti;
+            text-align: center;
+            /*display: table-cell;
+            vertical-align: middle;/*这两行的作用是垂直居中*/
+            height: 40px;
+            margin: -25px 5px 5px;
+            background: #093;
+            color: #ffffff;
+            border-radius: 8px 8px 0px 0px;
+        }
+        .recommendedToYou2 h3{
+            font-size: 180%;
+            font-family: STkaiti;
+            color: #ffffff;
+            background: #00a971;
+            font-weight: 500;
+            margin-right: -2px;
+            margin-top: -5px;
+            padding: 0 16px;
+            height: 50px;
+            line-height: 50px;
+            border-bottom: 1px solid #ddd;
+            border-radius: 5px 5px 0px 0px;
+        }
+        .ContentLeftList li{
+            list-stylnewContentLeftTitlee-type: decimal;
+        }
+        .LeftListGroup{
+            text-align: center;
+
+            height: 100px;
+            background: #00a971;
+            margin: 5px;
+            border-radius: 5px;
+        }
+        .newContentLeftTitle a:link{color: #666666;}
+        .newContentLeftTitle a:hover{font-size: 110%;}
+        .newContentLeftTitle a:visited{font-size: 120%;}
+        .recommendedToYou3 h3{
+            font-size: 150%;
+            font-family: STkaiti;
+            color: #ffffff;
+            background: #00a971;
+            font-weight: 500;
+            margin-right: -1px;
+            margin-top: -5px;
+            padding: 0 16px;
+            height: 50px;
+            line-height: 50px;
+            margin-bottom: -0.5px;
+            border-bottom: 1px solid #ddd;
+            border-radius: 5px 5px 0px 0px;
+        }
+        .ContentLeftList3{
+            list-style-type: none;
+            margin: 0px;
+            padding: 0px;
+            margin-right: -1px;
+            overflow: hidden;
+        }
+        .ContentLeftList3 a:link,.ContentLeftList3 a:visited{
+            display: block;
+            width: 194px;
+            border-top: 1px solid #ffffff;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #bebebe;
+            text-align: left;
+            padding: 4px;
+            text-decoration: none;
+            /*text-transform: uppercase;*/
+        }
+        .ContentLeftList3 a:hover,.ContentLeftList3 a:active{
+            /*background-color: #cc0000;*/
+            background-color: #00A971;
+        }
+        #newContentLeftMore{
+            margin: 10px 3px;
+            font-size: 130%;
+        }
+        #newContentMainBox{
+            float: left;
+            /*margin-top: -20px;*/
+            /*padding-top: 20px;*/
+            width: 890px;
+            margin-left: 50px;
+            border: 1px #d0d0d0 solid;
+        }
+        #newContentMain{
+            /*margin-top: -20px;*/
+            padding-top: 20px;
+            /*letter-spacing: 3px;*/
+            /*line-height: 160%;*/
+            padding-right: 1cm;
+            padding-left: 1cm;
+            padding-bottom: 1cm;
+            border-bottom: 1px #d0d0d0 solid;
+            /*border: 2px #f00 solid;*/
+            /*background: #90d;*/
+        }
+        #newContentMainMore{
+            height: 20px;
+            margin: 20px;
+            color: black;
+            font-size: 130%;
+        }
+        .Clc{
+            clear: both;
+        }
+        .LeftListGroup{
+            /*height: 100px;*/
+            margin-left: -20px;
+            margin-right: 15px;
+            display: inline-block;
+            border-bottom: 1px solid #d0d0d0;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        .LeftListGroup a:link{color: #666666;}
+        .LeftListGroup a:hover{font-size: 102%;}
+        .LeftListGroup a:visited{font-size: 120%;}
+    </style>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            min-width: 1200px;
+            height: auto;
+            box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+            color: #323233;
+        }
+        .heade {
+            width: 100%;
+            min-width: 1200px;
+            height: 80px;
+            background-color: #FFFFFF;
+            z-index: 999;
+            position: fixed;
+            -webkit-box-shadow: 0 2px 4px #C0C0C0;
+            box-shadow: 0 2px 4px #C0C0C0;
+            margin-top: 0;
+            top: 0;
+            box-sizing: border-box;
+        }
+
+        .heade_logo {
+            float: left;
+            margin-left: 100px;
+            height: 60px;
+            text-align: center;
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+        .heade_nav {
+            float: right;
+            margin-right: 130px;
+            text-align: center;
+            margin-top: 25px;
+            margin-bottom: 0;
+        }
+        .heade_nav>a {
+            margin-right: 35px;
+            font-size: 18px;
+            margin-top: auto;
+            margin-bottom: auto;
+            cursor: pointer;
+        }
+        .heade_nav>a:hover {
+            color: #000000;
+            font-size: 18px;
+            background-color: white;
+        }
+        .applet_main:hover{
+            color: #000000;
+            font-size: 20px;
+            background-color: white;
+        }
+        .applet_main{
+            display: inline-block;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .applet_code {
+            position: fixed;
+            top: 69px;
+            right: 130px;
+            width: 250px;
+            height: 250px;
+            background-color: #FFFFFF;
+            text-align: center;
+            z-index: 999;
+            display: none;
+        }
+        .code_content {
+            /*margin: auto;*/
+            margin-top: 10px;
+            text-align: center;
+            height: auto;
+            width: auto;
+            right: auto;
+        }
+        .code_img {
+            width: 200px;
+            height: 200px;
+        }
+        .code_content>span {
+            font-size: 14px;
+            display: block;
+            /*margin-top: 10px;*/
+        }
+    </style>
+    <style>
+        .banner {
+            height: 580px;
+        }
+        .banner_img  {
+            width: 100%;
+            margin: 0;
+            height: 580px;
+            position: relative;
+            z-index: -10;
+        }
+        .banner_main {
+            margin-top: -350px;
+            top: -400px;
+            text-align: center;
+            left: auto;
+            color: #FFFFFF;
+            font-size: 12px;
+            /*border: 1px solid red;*/
+            width: 100%;
+        }
+        .slogan_title {
+            font-size: 68px;
+            display: block;
+            letter-spacing: 20px;
+        }
+        .slogan_english {
+            font-size: 20px;
+            display: block;
+            line-height: 32px;
+        }
+        .new {
+            display: none;
+            height: 300px;
+            width: 250px;
+            position: absolute;
+            left: 8%;
+            color: black;
+            font-size: 18px;
+            background-color: rgb(190,232,226);
+            -webkit-box-shadow: 2px 2px 2px rgb(170,224,224);
+            box-shadow: 2px 2px 2px rgb(170,224,224);
+        }
+        .log {
+            display: none;
+            height: 300px;
+            width: 250px;
+            position: absolute;
+            color: black;
+            font-size: 18px;
+            background-color: rgba(255,255,255,1.00);
+            -webkit-box-shadow: 4px 4px 4px gray;
+            box-shadow: 4px 4px 4px gray;
+            right: 10%;
+            top: 240px;
+        }
+    </style>
+    <style>
+        a{
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .articles_navigration{
+            position: relative;
+            height: 35px;
+            background-color: white;
+            color: #ff8000;
+            font-size: 18px;
+            left: 110px;
+            margin-top: 5px;
+            /*margin-bottom: 5px;*/
+            border-bottom: 1px solid #e2e2e2;
+        }
+        .articles{
+            background-color: #f7f7f8;
+            /*height: 3000px;*/
+        }
+        .articles_main{
+            width: 85%;
+            background-color: #ffffff;
+            margin: auto;
+            border: 1px solid #d8d8d8;
+        }
+        .articles_information {
+            text-align: left;
+            height: 100px;
+            width: 100%;
+            margin-left: 10px;
+            padding-top: 20px;
+        }
+        .articles_title{
+            line-height: 14px;
+        }
+        .articles_time{
+
+        }
+        .articles_essay{
+            border-top: 2px solid #d8d8d8;
+            font-size: 18px;
+            color: #6c6c6c;
+            line-height: 30px;
+            padding: 50px 15px 200px 15px;
+        }
+        .footer{
+            clear: both;
+            width: 100%;
+            height: 130px;
+            /*border: 1px solid red;*/
+        }
+        .footer_main{
+            margin-top: 50px;
+            text-align: center;
+            font-size: 16px;
+            color: #9e9e9f;
+        }
+    </style>
+</head>
+<body>
+<div class="heade">
+    <div class="heade_logo">
+        <img src="image/2085355245.jpg" alt="logo" height="45" scr="#"/>
+    </div>
+    <div class="heade_nav">
+        <a href="index.html">首页</a><a href="articles.html">新闻</a><a href="aboutus.html">关于我们</a>
+    </div>
+</div>
+<div class="banner">
+    <img src="image/495249664.jpg" class="banner_img"/>
+    <a name="moreNewsKurban"></a>
+    <a name="moreNewsPatigul"></a>
+</div>
+    <div style="height: 50px"></div>
+    <div id="newContainer">
+        <div id="newContent">
+            <div id="newContentLeftBox">
+                <div id="newContentLeft">
+
+                    <div class="recommendedToYou3"><h3>为你推荐</h3></div>
+                    <ul class="ContentLeftList3">
+                        <li class="LeftListGroup3"><a href="#moreNewsKurban" name="new201905012_1name" onclick="new201905012_1()" onmousemove="new201905012_1move()" onmouseout="new201905012_1out()">天南大同学参与录制《挑战不可能》</a></li>
+                        <li class="LeftListGroup3"><a href="#moreNewsKurban" name="new201905012_2name" onclick="new201905012_2()" onmousemove="new201905012_2move()" onmouseout="new201905012_2out()">春天里，享受团建的欣喜</a></li>
+                        <li class="LeftListGroup3"><a href="#moreNewsKurban" name="new201905012_3name" onclick="new201905012_3()" onmousemove="new201905012_3move()" onmouseout="new201905012_3out()">跟着小卡一起去做公益吧</a></li>
+                        <li class="LeftListGroup3"><a href="#moreNewsKurban" name="new201905012_4name" onclick="new201905012_4()" onmousemove="new201905012_4move()" onmouseout="new201905012_4out()">像我这样的人开会装不了深沉</a></li>
+                        <li class="LeftListGroup3"><a href="#moreNewsKurban" name="new201905012_5name" onclick="new201905012_5()" onmousemove="new201905012_5move()" onmouseout="new201905012_5out()">有的人错过了就是一辈子</a></li>
+                    </ul>
+                </div>
+                <!-- <div id="newContentLeftMore" class="moreAColor">
+                    <div id="newContentPreviousPage" style="float: left;"><a href="#" title="暂时没有上下页">上一页</a></div>
+                    <div id="newContentNextPage" style="float: right;"><a href="#" title="暂时没有上下页">下一页</a></div>
+                </div> -->
+            </div>
+            <div id="newContentMainBox">
+                <div id="newContentMain">
+                    <div id="new201905012_1" style="display: block; font-family: kaiti;font-size: 20px; height: 4800px;" >
+                        
+                        <div class="articles_information">
+                            <h2 class="articles_title">卡片校园--最靠谱的大学生优质兼职+职业导航平台</h2>
+                            <span class="articles_time">2019-04-03 18:42:22</span>
+                        </div>
+                        <div class="articles_essay" style="font-size: 20px;">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                近日，卡片校园组织天津大学与南开大学同学参与录制的挑战不可能第四季之加油中国相关档期在央视综合频道播出。           </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                《挑战不可能之加油中国》是中央电视台综合频道推出大型励志挑战类节目，以秉承中华民族“刚健有为、自强不息”的精神为理念，凸显人类挑战自我的勇气和智慧，弘扬自强不息的中国精神。 </p>
+
+                            <img src="image/20190512140617.jpg" style="width: 100%;">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                3月9日至10日，卡片校园组织百余位天南大同学从天津乘专车出发前往北京蟹岛中外名人影视创作基地参与挑战不可能第四季之加油中国第六期与年度盛典录制。
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                节目录制现场氛围热烈，舞台华丽。多位挑战者轮番登场，给现场同学带来了脑力、技能等方面的极致挑战项目。
+                            </p>
+                            <img src="image/20190512140951.jpg" style="width: 100%;">
+                            <img src="image/20190512141126.jpg" style="width: 390px; height: 390px; float: left;">
+                            <img src="image/20190512141212.jpg" style="width: 390px; height: 390px; float: right;">
+                            <div style="clear: both;"></div>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                挑战人脑速记与运算极限的珠心算马拉松项目充分展示了人脑潜能与珠心算的魅力。探索科技前沿的5G远程操控驾驶技术让在场同学对5G时代的到来充满了期待。武警吉林省总队特战队员1.7秒5发子弹全部命中目标，终极挑战中角逐“极速枪王”，震撼全场。
+                            </p>
+                            <img src="image/20190512141736.jpg" style="width: 100%;">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                录制现场，身着一袭白色婚纱的“预备军嫂”，在武警战士们整齐铺放的红毯上，一步一步地走向因训练常年无法请假回家的男友。“既然你不能来娶我，今天我就主动来嫁给你”，这场大胆主动的求婚，惊喜感动全场观众。
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                挑战项目精彩纷呈、令人震撼。主持人撒贝宁的妙语连珠给大家留下了深刻的印象。
+                            </p>
+                            <img src="image/20190512141858.jpg" style="width: 100%;">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                董卿、孙杨、李昌钰三位评委老师由表及里,以小见大的点评揭示了挑战项目背后挑战者勇于挑战自我的可贵精神以及艰苦付出的汗水，让同学们深受触动与启发。
+                            </p>
+                            <img src="image/20190512142038.jpg" style="width: 100%;">
+                            <img src="image/20190512142107.jpg" style="width: 390px; height: 390px; float: left;">
+                            <img src="image/20190512142146.jpg" style="width: 390px; height: 390px; float: right;">
+                            <div style="clear: both;"></div>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                由于录制时间较长，返回抵津时已是夜晚，卡片校园特意协调安排车辆把两校新校区同学直接送达学校。
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                在连续数小时的高强度录制中同学们积极配合，展现了天大人与南开人良好的精神风貌与青春朝气，也得到了节目组的肯定与赞赏。
+                            </p>
+                        </div>
+                        <div class="articles_other"></div>
+                    </div>
+                    <div id="new201905012_2" style="display: none; font-family: kaiti;font-size: 20px; height: 11300px;">
+                        <div class="articles_information">
+                            <h2 class="articles_title">卡片新闻--春天里，享受团建的欣喜</h2>
+                            <span class="articles_time">2019-03-31 14:36:22</span>
+                        </div>
+                        <div class="articles_essay">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                昼夜平分，暖意生。阳春三月，春风十里，一切都是那么的有生机。            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                都说春天寓意着生机，洋溢着朝气，卡片在这个美好的季节里也迎来了新的成员，为这个大家庭又增添了全新的活力。上个周末下午，在北洋园的素拓基地，卡片校园进行了一次别开生面的团建活动。            </p>
+                            <img src="image/20190512213819.jpg" style="width: 100%;">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                尽管有许多是刚加入卡片的萌新，大家彼此还不是很熟识，但这完全没有影响大家参与素拓团建的积极性。每个人都非常开心，脸上洋溢着灿烂的笑容。
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                刚进入素拓基地，大家就迫不及待地玩起了铁索桥、平衡索和套轮胎的游戏，有说有笑，不亦乐乎。
+                            </p>
+                            <img src="image/微信图片_20190512213930.jpg" style="width: 100%;">
+                            <img src="image/微信图片_20190512214055.jpg" style="width: 100%;">
+                            <img src="image/微信图片_20190512214108.jpg" style="width: 100%;">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                之后，素拓基地的老师通过简单的小游戏增加了大家彼此之间的默契，进一步活跃了气氛。老师把大家随机分成了两组，并给每组下达了任务：由成员姓名想出一套“姓名操”。在大家的共同努力下，每队都顺利地完成了这项任务，更记住了彼此的名字。
+                            </p>
+                            <img src="image/微信图片_20190512214314.jpg" style="width: 100%;">
+                            <b style="margin: 20px 35%; border-bottom: 1px solid blue; font-size: 25px; text-align: center;">两队大比拼</b>
+
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                但活动的精彩度和有趣度远不止于此。每组被要求推举出一名队长和一位助手，并要在十分钟之内想好队名、口号、队歌、队标。任务很艰巨，但卡片成员们齐心协力，最终，两支队伍分别为“卡皇队”与攀高队”，进行之后项目的比拼。
+                            </p>
+                            <img src="image/微信图片_20190512221047.jpg" style="width: 100%;">
+                            <img src="image/微信图片_20190512221058.jpg" style="width: 100%;">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                两队都是信心百倍，气势如虹。“卡皇卡皇，卡片之皇”，“攀高攀高，勇攀高峰”，两队大声喊着自己队伍的口号，进入到了第一个项目——同心鼓的比拼。
+                            </p>
+                            <div style="margin: 20px 35%; border-bottom: 1px solid blue; font-size: 25px; text-align: center;"><b>卡片齐心，其利断金</b></div>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                同心鼓，顾名思义，需要同心协力。两支队伍分别用同心鼓颠球，在两分钟的时间内，颠球次数多的队伍获胜。当大家都认为这是小菜一碟时，却被现实狠狠泼了一瓢冷水。每队都是使尽浑身解数，但颠不到一两个就失败了，尝试了很多次都是如此，于是老师给了每队15分钟练习。
+                            </p>
+                            <img src="image/微信图片_20190512221241.jpg" style="width: 100%;">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                尽管现实让人气馁，但大家却一点也没有放弃，在一次又一次的尝试与老师的指导下，大家逐渐找到了方法：彼此配合，默契用力，重心放低。从颠不了一个，到慢慢的两个、四个、五个......大家配合得越来越默契，成功的次数也越来越多。最后，“攀高队”发挥更胜一筹，以53:49击败了“卡皇队”取得了胜利。
+                            </p>
+                            <img src="image/微信图片_20190512221317.jpg" style="width: 100%;">
+                            <div style="margin: 20px 35%; border-bottom: 1px solid blue; font-size: 25px; text-align: center;"><b>穿越电网，一个都不能少！</b></div>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                在好不容易完成了同心鼓的项目后，两队成员都有些筋疲力尽。但老师此时却布置了看起来根本不可能完成的任务：半小时内“穿越电网”，不得碰触铁链，否则穿越者和之前那位成功过网者需重新再来，而且不得说话，大部分网孔只允许过一次。
+                            </p>
+                            <img src="image/微信图片_20190512221429.jpg" style="width: 100%;">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                两队都很快进行了尝试，但无一例外，都以失败而告终。本以为此次的素拓活动就这样遗憾收场时，两队却放弃了继续竞争，不约而同地选择了合作。众人拾柴火焰高，在全体参加的卡片成员的努力下，在又经历了多次失败后，终于安全地把一位成员运过了“电网”。
+                            </p>
+                            <img src="image/微信图片_20190512221513.jpg" style="width: 100%;">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                有句话道：万事开头难，中间更难，结尾最难。我想，这应该可以很形象地形容这个项目的挑战了吧。在第一次的成功之后，大家又遭遇了数不清的挫折，每一次的失败总会让我们离胜利的距离更远一步，但同时也让我们积累了更多经验。最终，在规定时间内，大家竟然完成了这个几乎不可能的任务，每个人都兴高采烈，为自己和伙伴们喝彩。
+                            </p>
+                            <img src="image/微信图片_20190512221612.jpg" style="width: 100%;">
+                            <div style="margin: 20px 35%; border-bottom: 1px solid blue; font-size: 25px; text-align: center;"><b>留下的，不只是回忆</b></div>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                活动结束时，太阳已经快要下山。老师让我们围坐在一圈，分享一下自己的体会。每一个人脸上虽然有疲倦，但更多的是微笑。是啊，这不仅只是一次活动，一次游戏，一次简单的聚集，更是一种联系，一种纽带，一种集体的感动。
+                            </p>
+                            <img src="image/微信图片_20190512221801.jpg" style="width: 100%;">
+                            <div style="margin: 20px 35%; border-bottom: 1px solid blue; font-size: 25px; text-align: center;"><b>前路漫长，但未来可期</b></div>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                因为每个人都对卡片有归属感、集体感，懂得团结合作，所以我们才能成功地完成每一个项目、每一个挑战。正是有了队员们的合作，我们才能集思广益，想出队名、口号和队歌，才能让队伍成型，拧成一股绳，劲往一处使，才能完成同心鼓，才能让队伍的比拼那么精彩，那么激动人心。正是有了队伍间的合作，共同努力，我们才能完成“穿越电网”，在一次又一次的失败后仍然奋力站起，让每一个人都安全通过，让不可能成为可能。
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                是啊，没有什么是绝对不可能的。就像在这次团建中一样，面对压力，我们应该采取积极措施，将其转化为动力。尽管万事开头难，尽管前路险阻，但那又如何呢？我们可是怀揣着梦想的卡片人啊！
+                            </p>
+                            <img src="image/微信图片_20190512221856.jpg" style="width: 100%;">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                我们正是因为怀揣梦想，才在卡片相遇。我们是一个组织，更是一个团队，一个大家庭。我们有纪律，有想法，有干劲，更有一颗初心。我们一路蜕变，不断成长，砥砺前行。我们相信，卡片校园团队，会更加有效率，有活力，伴随你我大学生活的点点滴滴。
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                春天，是追梦的季节。暖意令我们飞扬，赶走忧郁，拥抱希望。相信每一个加入卡片的伙伴们都是因为多看了一眼，从此再也难忘她的容颜。相信经过这次团建活动，卡片里的新人们会更加融入这个大家庭，而所有的卡片人也一定会明白我们这个团队的魅力。
+                            </p>
+                            <p >&nbsp;&nbsp;&nbsp;&nbsp;
+                                暖暖的春天，让我们一起为卡片种下梦想，让它恒久比天长。
+                            </p>
+                        </div>
+                        <div class="articles_other"></div>
+                    </div>
+                    <div id="new201905012_3" style="display: none; font-family: kaiti;font-size: 20px; height: 2800px;" >
+                        
+                        <div class="articles_information">
+                            <h2 class="articles_title">卡片新闻--跟着小卡一起去做公益吧</h2>
+                            <span class="articles_time">2019-02-27 22:41:22</span>
+                        </div>
+                        <div class="articles_essay" style="font-size: 20px;">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                2月25日由卡片校园组织的校园公益讲演活动走进咸水沽五中。卡片校园志愿者天津大学周涵韬同学与张启锐同学先后为全体初三同学做了学习方法与职业规划的分享讲座。咸水沽五中杨校长、卡片校园刘洋以及初三年级部部分老师代表出席活动。
+                            </p>
+                            <img src="image/微信图片_20190512224153.jpg" style="width: 100%;">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                周涵韬同学就初三年级主要学习科目语数英等从课程特点、学习方法等方面给同学们做了讲解。他结合自身经历分享了各科的套路与应试技巧，幽默诙谐的风格不时引得满堂欢笑。
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                张启锐同学从个人兴趣与理想发问，循序渐进地讲解了职业规划的意义与如何做一个合适自己的职业规划。其富有激情的讲演赢得了阵阵掌声，同学踊跃交流互动，现场氛围热烈。
+                            </p>
+                            <img src="image/微信图片_20190512224316.jpg" style="width: 100%;">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                卡片校园在致力于提供优质可靠的兼职与实习信息，让大学生活多一些体验工作、感受生活与提升综合素质机会的同时，将会推出系列公益活动，带大家走出校园奉献社会。兼一职，知一事，修一技，小事先为，大事可成。行小善，积善成德，可留清气满乾坤，善莫大焉。
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                以咸水沽五中讲演为序幕，本学期将组织天津大学与南开大学的志愿者走入津南区各大中小学，给同学们带来学习经验、职业规划等系列校园公益讲演。
+                            </p>
+                            <img src="image/微信图片_20190512224424.jpg" style="width: 100%;">
+                        </div>
+                    </div>
+                    <div id="new201905012_4" style="display: none; font-family: kaiti;font-size: 20px; height: 2800px;" >
+                        
+                        <div class="articles_information">
+                            <h2 class="articles_title">卡片新闻--像我这样的人开会装不了深沉</h2>
+                            <span class="articles_time">2019-03-22 18:42:22</span>
+                        </div>
+                        <div class="articles_essay" style="font-size: 20px;">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                3月15日下午，卡片校园在北洋园校区47号教学楼召开2018-2019年度春季学期第一次会议，听取市场部与研发组上学期工作汇报及近期安排，讨论新学期团队建设管理工作。天南大新老校区全体成员出席会议。</p>
+                            <img src="image/微信图片_20190512225022.jpg" style="width: 100%;">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                大家认为，市场部是校内外资源对接联通的主体。上学期在部门同学的共同努力下，家教业务体量快速增长，质量持续提升，发布与招募流程更加规范化、便利化。微实习业务、校内地推等新业务相继建立，业务结构进一步优化，新增长点不断涌现，市场部工作不断开创新局面，取得新进展。
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                新学期市场部要始终坚持聚焦主业、扩大体量，优化质量的原则，在做大、做精家教业务与微实习业务上下功夫，求实效，出成绩。
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                大家指出，网站及客户端软件开发是平台未来提升服务范围与质量的门面担当与顶梁骨架。上学期在技术人员不足，产品设计多次更改的情况下，研发组顶住压力，努力工作，把各项研发任务基本铺开，为新学期的工作打下了坚实基础。
+                            </p>
+                            <img src="image/微信图片_20190512225210.jpg" style="width: 100%;">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                开发工作技术含量高、难度系数大，研发组的同学要坚定决心、耐住寂寞、卯足干劲，加快开发进度，确保本学期各项开发工作如期完成。
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                大家强调，团队是平台存在和发展的基础，要始终把团队建设摆在首要的位置。在相互尊重、一律平等、不误学业的前提下，建立部门分工、主管负责、责任到人的办事机制，进一步明确激励奖惩方法，切实提高运行效率。
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                要持续优化人员结构，在第一轮招募工作顺利完成的基础上，继续开启招募通道，本学期持续吸纳合适新成员加入，对办事懒散、责任心缺失的要适时劝退，做到大浪淘沙，有进有出。
+                            </p>
+                            <img src="image/微信图片_20190512225712.jpg" style="width: 100%;">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                继续完善学习培训安排，精心组织每月一次的技能培训与理论学习，合理推动部门人员轮换，让团队成员在卡片期间学有所会、来有所获、练有所能、才有所长。
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                与会同学还听取了新媒体运营及策划部与活动组近期的工作汇报及安排，并就有关问题进行了讨论。
+                            </p>
+
+                            
+                        </div>
+                    </div>
+
+                    <div id="new201905012_5" style="display: none; font-family: kaiti;font-size: 20px; height: 7800px;" >
+                        
+                        <div class="articles_information">
+                            <h2 class="articles_title">小卡纳新--有的人错过了就是一辈子</h2>
+                            <span class="articles_time">2019-03-04 18:42:22</span>
+                        </div>
+                        <div class="articles_essay" style="font-size: 20px;">
+                            <p style="text-align: center;">轻轻地我要告诉你</p>
+                            <p style="text-align: center;">小卡要招人啦</p>
+                            <p style="text-align: center;">卡什么？</p>
+                            <p style="text-align: center;">卡片校园啊</p>
+                            <p style="text-align: center;">咦我好像在哪见过你</p>
+                            <p style="text-align: center;">介是个嘛玩意儿？</p>
+                            <img src="image/微信图片_20190512230534.jpg" style="width: 100%;">
+                            <br>
+                            <p style="text-align: center;">臣本书生，躬读于天南（大）</p>
+                            <p style="text-align: center;">不想苟图安逸于小舍，却欲年少有为不自卑</p>
+                            <p style="text-align: center;">然今兼职零乱，途路疲弊</p>
+                            <p style="text-align: center;">坑我骗我还想我蹉跎不反驳</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                卡片校园是由天津大学与南开大学在校学生创立的大学生专属的兼职平台，致力于为同学们提供优质、可靠的兼职信息，且不向学生收取任何费用。</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                兼职这个事啊，小卡觉得获取报酬是次要的，主要是接触社会，体验工作，锻炼自己。所谓兼一职，知一事，练一技，小事先为，大事方可成。以后找面试应聘也让简历多一份工作经历嘛。 </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                江湖不是打打杀杀，是人情世故，职场亦是如此。业绩靠背公式是千呼万唤出不来的，人情世故可不像学校里的考卷易知易背易会的，易燃易爆炸倒是有可能。而实习、兼职可以让你提前了解适应职场。 </p>
+                            <br>
+                            <p style="text-align: center;">小卡的网站与APP马上就要和大家见面了</p>
+                            <p style="text-align: center;">要不要来小卡一起搞事情，搞大事情呢？ </p>
+                            <br>
+                            <p style="text-align: center;">假如我年少有为不自卑</p>
+                            <p style="text-align: center;">却也懂得什么是珍贵</p>
+                            <br>
+                            <p style="text-align: center;">即便一无所有</p>
+                            <p style="text-align: center;">心里惦惦念念的还是如何给你更多</p>
+                            <p style="color: #00a971; font-size: 22px;">1.舒适的工作环境</p>
+                            <img src="image/微信图片_20190512232011.jpg" style="width: 100%;">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                我曾经没跨过山河大海，但真用过医院WIFI，我曾经以为我连上了一切，转眼间就掉线飘散如烟。要WiFi吗？不限速不限量的那种，小卡这有。</p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                小卡也是个喜欢享受生活的人，喜欢大家一起喝喝茶、吃小零食，玩玩棋。玩轮滑、滑板吗？一起在光华的地板上摩擦啊，这些小卡都备好了哦。 </p>
+                            <img src="image/微信图片_20190512232104.jpg" style="width: 100%;">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                还有每月一次的团建活动，小卡在外面认识了那么多商家朋友，吃喝玩乐的门路、优惠可不少呢。
+                            </p>
+                            <br>
+                            <p style="text-align: center;">累了的时候让小卡AI音箱给你唱首歌</p>
+                            <p style="text-align: center;">小卡小卡看有个人正在看着你</p>
+                            <p style="text-align: center;">看着你，看着你的推送目不转睛</p>
+                            <p style="text-align: center;">“原来你是最想留住的幸运”</p>
+                            <p style="text-align: center;">“原来我们的距离现在靠的那么近”</p>
+                            <br>
+                            <p style="color: #00a971; font-size: 22px;">2.锻炼能力，收获成长</p>
+                            <img src="image/微信图片_20190512232451.jpg" style="width: 100%;">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                和小卡一起策划大型的校园商业活动，与商家、机构沟通洽谈合作，学会既要为己方争取最大利益又要双方合作愉快。
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                一起努力为同学们寻找更多优质兼职，同时最大程度地保障同学利益与平台信誉。接触到众多校外企业、商家，这可都是人脉资源啊。
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                每月一次集体学习或培训，学知识、学技能，育情怀，阔视野。思想碰撞的火花，唇枪舌战的讨论。妙，妙不可言。
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                一本正经地念稿可不是小卡的风格，小卡的学习培训从来都是谈笑间有所思有所悟有所获。
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                在小卡会接触到很多增才干，长见识的事，也有很多的机会让你去施展才华，放飞想法。
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                和小卡一起工作的日子可以开具工作经历或实习证明哦。
+                            </p>
+                            <br>
+                            <p style="text-align: center;">大学之道</p>
+                            <p style="text-align: center;">在于明善求知</p>
+                            <p style="text-align: center;">在于识人知事</p>
+                            <p style="text-align: center;">那小卡们都是些怎样的人呢？</p>
+                            <img src="image/微信图片_20190512233005.jpg" style="width: 100%;">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                这一群有趣的人啊
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                我不是天生要强，因为从小不用强生。但这并不妨碍我妙语连珠随口起，谈笑间纷扰皆已不见。
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                非是我矫揉造作，我只是不甘平淡寂寞。
+                            </p>
+                            <br>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                这是一群多才的人啊
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                平面设计、程序开发、摄影摄像、新媒体运营、文字写作等等，只要你想学，都有同学可以教你。未有经天纬地之才，也有各有一技之长。
+                            </p>
+                            <img src="image/微信图片_20190512233147.jpg" style="width: 100%;">
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                这也是一群蛮拼的人啊
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                为了一个比赛，通宵达旦地的准备材料。两天内拜访完津南区的各大家教机构，走完了平时在学校里一个月走的步数。遇到过很多不解，也碰到多很多不屑。
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                曾经因为拿到了高端兼职、实习而欣喜激动，也曾经跟坑害学生的商家拍桌瞪眼，念念不忘，必要回击。
+                            </p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+                                这是一群大一到研三的天大南开人啊 
+                            </p>
+                            <br>
+                            <p style="text-align: center;">像你这优秀的人</p>
+                            <p style="text-align: center;">像你这样寻找的人</p>
+                            <p style="text-align: center;">像你这样不甘平凡的人</p>
+                            <p style="text-align: center;">小卡一直都在等</p>
+                            <img src="image/微信图片_20190512233405.jpg" style="width: 100%;">
+                        </div>
+                    </div>
+                </div>
+                <div id="newContentMainMore" class="moreAColor">
+                    <div style="float: left;text-decoration:none;" ><a id="newContentPreviousNews" href="#moreNewsKurban" onclick="PreviousNews()" >上一篇新闻</a></div>
+                    <div style="float: right;text-decoration:none;"><a id="newContentNextNews" href="#moreNewsPatigul" onclick="NextNews()">下一篇新闻</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="Clc"></div>
+    </div>
+    <div class="Clc"></div>
+    <footer class="footer">
+        <div class="Clc"></div>
+        <div class="footer_main">
+            <a>Copyright @2019 天津悦狐网络科技有限公司 /津ICP备19001737号-1</a>
+            <p>本站内容、图片、视频为网站模板演示数据，如有涉及侵犯版权，请联系我 们提供书面反馈，我们核实后会立即删除。</p>
+            <p>Powered by  MetInfo  6.2.0</p>
+        </div>
+    </footer>
+    <script type="text/javascript">
+        // alert(0);
+        // var yes= 1;
+        var CurrentContentID = document.getElementById("new201905012_1");
+            function new201905012_1(){
+                // alert(1);
+                CurrentContentID.style.display="none";
+                // alert(1.5);
+                CurrentContentID = document.getElementById("new201905012_1");
+                CurrentContentID.style.display="block";
+            }
+            function new201905012_1move(){
+                CurrentContentID.style.display="none";
+                document.getElementById("new201905012_1").style.display="block";
+            }
+            function new201905012_1out(){
+                if(CurrentContentID != document.getElementById("new201905012_1")){//鼠标脱离的时候，如果跟原来的不一样，那就现在的隐藏掉，显示原来的；
+                    document.getElementById("new201905012_1").style.display="none";
+                    CurrentContentID.style.display="block";
+                }       
+            }
+            function new201905012_2(){
+                // alert(2);
+                CurrentContentID.style.display="none";
+                CurrentContentID = document.getElementById("new201905012_2");
+                CurrentContentID.style.display="block";
+            }
+            function new201905012_2move(){
+                CurrentContentID.style.display="none";
+                document.getElementById("new201905012_2").style.display="block";
+            }
+            function new201905012_2out(){
+                if(CurrentContentID != document.getElementById("new201905012_2")){//鼠标脱离的时候，如果跟原来的不一样，那就现在的隐藏掉，显示原来的；
+                    document.getElementById("new201905012_2").style.display="none";
+                    CurrentContentID.style.display="block";
+                }       
+            }
+            function new201905012_3(){
+                // alert(3);
+                CurrentContentID.style.display="none";
+                CurrentContentID = document.getElementById("new201905012_3");
+                CurrentContentID.style.display="block";
+            }
+            function new201905012_3move(){
+                CurrentContentID.style.display="none";
+                document.getElementById("new201905012_3").style.display="block";
+            }
+            function new201905012_3out(){
+                if(CurrentContentID != document.getElementById("new201905012_3")){//鼠标脱离的时候，如果跟原来的不一样，那就现在的隐藏掉，显示原来的；
+                    document.getElementById("new201905012_3").style.display="none";
+                    CurrentContentID.style.display="block";
+                }       
+            }
+            function new201905012_4(){
+                // alert(4);
+                CurrentContentID.style.display="none";
+                CurrentContentID = document.getElementById("new201905012_4");
+                CurrentContentID.style.display="block";
+            }
+            function new201905012_4move(){
+                CurrentContentID.style.display="none";
+                document.getElementById("new201905012_4").style.display="block";
+            }
+            function new201905012_4out(){
+                if(CurrentContentID != document.getElementById("new201905012_4")){//鼠标脱离的时候，如果跟原来的不一样，那就现在的隐藏掉，显示原来的；
+                    document.getElementById("new201905012_4").style.display="none";
+                    CurrentContentID.style.display="block";
+                }       
+            }
+            function new201905012_5(){
+                // alert(5);
+                CurrentContentID.style.display="none";
+                CurrentContentID = document.getElementById("new201905012_5");
+                CurrentContentID.style.display="block";
+            }
+            function new201905012_5move(){
+                CurrentContentID.style.display="none";
+                document.getElementById("new201905012_5").style.display="block";
+            }
+            function new201905012_5out(){
+                if(CurrentContentID != document.getElementById("new201905012_5")){//鼠标脱离的时候，如果跟原来的不一样，那就现在的隐藏掉，显示原来的；
+                    document.getElementById("new201905012_5").style.display="none";
+                    CurrentContentID.style.display="block";
+                }       
+            }
+            function PreviousNews(){
+                // alert(1);
+                if(CurrentContentID == document.getElementById("new201905012_1")){
+                    document.getElementById("newContentPreviousNews").title="已经是第一篇了，谢谢！";
+                    alert('已经是第一篇了，谢谢！');
+                }
+                else if(CurrentContentID == document.getElementById("new201905012_2")){
+                    CurrentContentID.style.display="none";
+                    CurrentContentID = document.getElementById("new201905012_1");
+                    CurrentContentID.style.display="block";
+                }
+                else if(CurrentContentID == document.getElementById("new201905012_3")){
+                    CurrentContentID.style.display="none";
+                    CurrentContentID = document.getElementById("new201905012_2");
+                    CurrentContentID.style.display="block";
+                }
+                else if(CurrentContentID == document.getElementById("new201905012_4")){
+                    CurrentContentID.style.display="none";
+                    CurrentContentID = document.getElementById("new201905012_3");
+                    CurrentContentID.style.display="block";
+                }
+                else if(CurrentContentID == document.getElementById("new201905012_5")){
+                    CurrentContentID.style.display="none";
+                    CurrentContentID = document.getElementById("new201905012_4");
+                    CurrentContentID.style.display="block";
+                }
+            }
+            function NextNews(){
+                // alert(1);
+                if(CurrentContentID == document.getElementById("new201905012_1")){
+                    CurrentContentID.style.display="none";
+                    CurrentContentID = document.getElementById("new201905012_2");
+                    CurrentContentID.style.display="block";
+                }
+                else if(CurrentContentID == document.getElementById("new201905012_2")){
+                    CurrentContentID.style.display="none";
+                    CurrentContentID = document.getElementById("new201905012_3");
+                    CurrentContentID.style.display="block";
+                }
+                else if(CurrentContentID == document.getElementById("new201905012_3")){
+                    CurrentContentID.style.display="none";
+                    CurrentContentID = document.getElementById("new201905012_4");
+                    CurrentContentID.style.display="block";
+                }
+                else if(CurrentContentID == document.getElementById("new201905012_4")){
+                    CurrentContentID.style.display="none";
+                    CurrentContentID = document.getElementById("new201905012_5");
+                    CurrentContentID.style.display="block";
+                }
+                else if(CurrentContentID == document.getElementById("new201905012_5")){
+                    document.getElementById("newContentPreviousNews").title="已经是最后一篇了，谢谢！";
+                    alert('已经是最后一篇了，谢谢！');
+                }
+            }
+    </script>
+</body>
+</html>

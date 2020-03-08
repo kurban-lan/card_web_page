@@ -1,0 +1,1195 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>卡片校园</title>
+</head>
+<!-- ------------------------------------------库尔班		图片换动--------------------------- -->
+<script src="js/slider.js"></script>
+<style>
+	body{background-color: #fff}
+		.jssorl-009-spin img {
+			animation-name:jssorl-009-spin;
+			animation-duration:1.6s;
+			animation-iteration-count:infinite;
+			animation-timing-function:linear
+	}
+	@keyframes jssorl-009-spin {
+			from {
+				transform:rotate(0);
+		}
+			to {
+				transform:rotate(360deg);
+		}
+	}.jssorb051 .i {
+		position:absolute;
+		cursor:pointer
+	}
+	.jssorb051 .i .b {
+		fill:#fff;
+		fill-opacity:.5
+	}
+	.jssorb051 .i:hover .b {
+		fill-opacity:.7
+	}
+	.jssorb051 .iav .b {
+		fill-opacity:1
+	}
+	.jssorb051 .i.idn {
+		opacity:.3
+	}
+	.jssora051 {
+		display:block;
+		position:absolute;
+		cursor:pointer
+	}
+	.jssora051 .a {
+		fill:none;
+		stroke:#fff;
+		stroke-width:360;
+		stroke-miterlimit:10
+	}
+	.jssora051:hover {
+		opacity:.8
+	}
+	.jssora051.jssora051dn {
+		opacity:.5
+	}
+	.jssora051.jssora051ds {
+		opacity:.3;
+		pointer-events:none
+	}
+<!-- ------------------------------------------库尔班		新闻兰--------------------------- -->
+<style type="text/css">
+		#NewContainer {
+			width: 100%;
+			padding: 0px;
+			margin: 0px auto;
+		    /*max-width: 100%;*/
+		    margin-right: auto;
+		    margin-left: auto;
+		    /*border: 1px solid blue;*/
+		    /*height: 400px;*/
+		}
+		#NewContainerTitle{
+			height: 100px;
+			font-size: 36px;
+			font-weight: 500;
+			text-align: center;
+			/*border: 1px solid blue;*/
+		}
+		#NewContainerContent{
+			/*border: 1px solid blue;*/
+			margin: 00px 150px;
+			height: 100px;
+			padding: 0px;
+		}
+		#NewContainerContent a:hover{
+			font-size: 130%;
+		}
+		#NewContainerContent a{
+			text-decoration: none;
+			float: right;
+			width: calc(100% - 65px);
+			height: 60px;
+			overflow: hidden;
+			white-space: nowrap;
+		    text-overflow: ellipsis;
+		    font-size: 20px;
+		    line-height: 60px;
+		    /*border: 1px solid blue;*/
+		    padding: 0px;
+		    color: #333333;
+		    text-align: center;
+		    /* position: relative; */
+		}
+		.metMore{
+			float: left;
+			padding: 0px;
+			margin: 0px;
+			height: 60px;
+			width: 220px;
+			list-style-type:none;
+			display:inline;
+			/*border: 1px solid blue;*/
+		}
+
+	</style>
+<style>
+	body {
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		min-width: 1200px;
+		height: auto;
+	}
+	a{
+		text-decoration: none;
+	}
+	.heade {
+		width: 100%;
+		min-width: 1200px;
+		height: 80px;
+		background-color: #FFFFFF;
+		z-index: 999;
+		position: fixed;
+		-webkit-box-shadow: 0 2px 4px #C0C0C0;
+		box-shadow: 0 2px 4px #C0C0C0;
+		margin-top: 0;
+		top: 0;
+	}
+
+	.heade_logo {
+		float: left;
+		margin-left: 100px;
+		height: 60px;
+		text-align: center;
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+	.heade_nav {
+		float: right;
+		margin-right: 130px;
+		text-align: center;
+		margin-top: 25px;
+		margin-bottom: 0;
+	}
+	.heade_nav>a {
+		color: #000;
+		margin-right: 35px;
+		font-size: 18px;
+		margin-top: auto;
+		margin-bottom: auto;
+		cursor: pointer;
+	}
+	.heade_nav>a:hover {
+		color: #000000;
+		font-size: 18px;
+        background-color: white;
+	}
+	.applet_main:hover{
+		color: #000000;
+		/*font-size: 20px;*/
+        background-color: white;
+	}
+	.applet_main{
+		display: inline-block;
+		font-size: 18px;
+		cursor: pointer;
+	}
+	.applet_code {
+		position: fixed;
+		top: 69px;
+		right: 130px;
+		width: 250px;
+		height: 250px;
+		background-color: #FFFFFF;
+		text-align: center;
+		z-index: 999;
+		display: none;
+	}
+	.code_content {
+		/*margin: auto;*/
+		margin-top: 10px;
+		text-align: center;
+		height: auto;
+		width: auto;
+		right: auto;
+	}
+	.code_img {
+		width: 200px;
+		height: 200px;
+	}
+	.code_content>span {
+		font-size: 14px;
+		display: block;
+		/*margin-top: 10px;*/
+	}
+</style>
+<style>
+	.banner {
+		/*height: 580px;*/
+		/*border: 1px solid #00ff22;*/
+	}
+	.banner_img  {
+		width: 100%;
+		margin-top:80px;
+		/*height: 580px;*/
+		position: relative;
+		z-index: -10;
+	}
+	.banner_main {
+		margin-top: -350px;
+		top: -400px;
+		text-align: center;
+		left: auto;
+		color: #FFFFFF;
+		font-size: 12px;
+		/*border: 1px solid red;*/
+		width: 100%;
+	}
+	.slogan_title {
+		font-size: 68px;
+		display: block;
+		letter-spacing: 20px;
+	}
+	.slogan_english {
+		font-size: 20px;
+		display: block;
+		line-height: 32px;
+	}
+	.new {
+		display: none;
+		height: 300px;
+		width: 250px;
+		position: absolute;
+		left: 8%;
+		color: black;
+		font-size: 18px;
+		background-color: rgb(190,232,226);
+		-webkit-box-shadow: 2px 2px 2px rgb(170,224,224);
+		box-shadow: 2px 2px 2px rgb(170,224,224);
+	}
+	.log {
+		display: none;
+		height: 300px;
+		width: 250px;
+		position: absolute;
+		color: black;
+		font-size: 18px;
+		background-color: rgba(255,255,255,1.00);
+		-webkit-box-shadow: 4px 4px 4px gray;
+		box-shadow: 4px 4px 4px gray;
+		right: 10%;
+		top: 240px;
+	}
+</style>
+<style>
+	.feature {
+		width: 100%;
+		/*height: 360px;*/
+		/*background-color: rgba(255,255,255,1.00);*/
+		/*border-bottom: 1px solid blue;*/
+		text-align: center;
+	}
+	.feature_content {
+		float: left;
+		margin-left: 10%;
+		width: 500px;
+		border: 1px solid red;
+		height: 300px;
+		margin-top: 20px;
+	}
+	.feature_img {
+		float: right;
+		border: 1px solid rgb(86,70,189);
+		height: 300px;
+		width: 30%;
+		margin-top: 20px;
+		margin-right: 20px;
+	}
+    .listbox_list{
+        margin: 0 30px 60px 30px;
+        display: inline-block;
+        width: 250px;
+        visibility: inherit;
+        opacity: 1;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        /*border: 1px solid red;*/
+    }
+    .listbox_list>h4{
+        /*text-align: left;*/
+        font-size: 18px;
+        font-weight: unset;
+        line-height: 0;
+    }
+    .listbox_hr{
+        /*text-align: left;*/
+        height: 1px;
+        border-top: 1px solid #727272;
+    }
+    .listbox_list>p{
+        /*text-align: left;*/
+    }
+</style>
+<style>
+	.part-time {
+		width: 100%;
+		text-align: center;
+		height: 900px;
+		background-color: rgb(255, 255, 255);
+	}
+	.part_main{
+		width: 95%;
+		text-align: center;
+		/*border: 1px solid red;*/
+		height: 100%;
+		margin-right: 35px;
+		margin-left: 35px;
+	}
+	.partime {
+		width: 60%;
+		height: 880px;
+		margin-left: 23px;
+		background-color: white;
+		float: left;
+	}
+	.partime_title {
+		width: 100%;
+		border: 1px solid #9c9c9c;
+		height: 42px;
+		/*padding-top: 10px;*/
+		font-size: 18px;
+		color: #1d7c2d;
+	}
+	.partime_title_left{
+		float: left;
+		margin-left: 30px;
+		margin-top: 9px;
+		margin-bottom: 9px;
+		/*color: #3c3c3c;*/
+	}
+	.partime_title_right{
+		float: right;
+		margin-right: 30px;
+		margin-top: 9px;
+		margin-bottom: 9px;
+		cursor: pointer;
+	}
+	.parts_info{
+		height: 47%;
+		width: 100%;
+		border: 1px solid #d8d8d8;
+	}
+	.issue{
+
+	}
+	.card_job{
+
+	}
+	.part_link {
+		float: left;
+		font-size: 20px;
+		margin-top: 5px;
+		margin-bottom: 3px;
+		color: rgba(0,0,0,1.00);
+		/* [disabled]font-weight: 500; */
+		width: 80px;
+	}
+	.title_link {
+		float: right;
+		margin-top: 7px;
+		margin-bottom: 7px;
+		color: blue;
+		width: 100px;
+		margin-left: 0;
+	}
+	.part_info {
+		width: 100%;
+		height: 50%;
+		border: 1px solid black;
+		background-color: rgba(255,255,255,1.00);
+	}
+	.train {
+		width: 36%;
+		height: 800px;
+		margin-right: 23px;
+		float: right;
+		margin-left: 0;
+	}
+	.train_title {
+		width: 100%;
+		height: 42px;
+		border: 1px solid #d8d8d8;
+		/*margin-bottom: 0;*/
+		/*padding-top: 10px;*/
+	}
+	.train_link {
+		float: left;
+		margin-left: 10px;
+		margin-top: 9px;
+		margin-bottom: 9px;
+		width: 80px;
+		font-size: 18px;
+		color: black;
+		border-right: 1px solid #9c9c9c;
+		cursor: pointer;
+		/*background-color: #6c6c6c;*/
+	}
+	.train_info {
+		width: 100%;
+		height: 39%;
+		border: 1px solid #d8d8d8;
+	}
+	.artical_left{
+		cursor: pointer;
+		font-size: 48px;
+		color: #3c3c3c;
+		position: relative;
+		bottom: 40px;left: -20px;
+	}
+	.trains_img{
+		width: 200px;
+	}
+	.trains_img:hover{
+		width: 202px;
+	}
+	.artical_left:hover{
+		color: black;
+		font-size: 50px;
+	}
+	.artical_right{
+		cursor: pointer;
+		font-size: 48px;
+		color: #3c3c3c;
+		position: relative;
+		bottom: 40px;
+		left: 20px;
+	}
+	.artical_right:hover{
+		color: black;
+		font-size: 50px;
+	}
+</style>
+<style>
+	.center-container{
+		width: 1150px;
+		position: relative;
+		overflow: hidden;
+		margin: 0 auto;
+	}
+	.job-box{
+		position: relative;
+		margin-bottom: 50px;
+		/*border: 1px solid red;*/
+	}
+	.job-header{
+		width: 100%;
+		height: 60px;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-direction: row;
+		flex-direction: row;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		margin-bottom: 15px;
+	}
+	.job-header-title{
+		font-size: 22px;
+		color: #3c3c3c;
+		font-weight: 700;
+		-ms-flex-item-align: center;
+		align-self: center;
+		line-height: 1.5;
+	}
+	.job-header-lookmore{
+		font-size: 16px;
+		color: #0050ff;
+		font-weight: 700;
+		-ms-flex-item-align: center;
+		align-self: center;
+		cursor: pointer;
+		line-height: 1.5;
+	}
+	.job-label{
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+		padding: 0 0 32px 0;
+	}
+	.job-hidden{
+		width: 100%;
+		height: 60px;
+		position: relative;
+		overflow: hidden;
+	}
+	.job-scroll{
+		width: 152%;
+		transition: margin-left .3s;
+		margin-left: 0;
+	}
+	.job-label-item{
+		width: 120px;
+		height: 46px;
+		background: #fff;
+		line-height: 46px;
+		box-shadow: 0 5px 10px 0 hsla(0,0%,90%,.6);
+		border-radius: 2px;
+		border: 1px solid #f1f1f1;
+		font-size: 18px;
+		color: #3c3c3c;
+		text-align: center;
+		margin-right: 14px;
+		float: left;
+		cursor: pointer;
+	}
+	.job-next{
+		width: 38px;
+		height: 38px;
+		background: url(https://qiniu-image.qtshe.com/20190213next.png) no-repeat 0 0;
+		background-size: 38px 38px;
+		position: absolute;
+		right: 0;
+		top: 6px;
+		cursor: pointer;
+	}
+	.job-list{
+		width: 100%;
+		position: relative;
+		overflow: hidden;
+		padding: 5px 50px 5px 0;
+		/*border: 1px solid #1d1eff;*/
+	}
+	.swiper_wrap{
+		width: 100%;
+		display: flex;
+	}
+	.swiper_main{
+		width: 100%;
+		margin: 0 1px 0 1px;
+		display: flex;
+		justify-content: space-between;
+		/*border: 1px solid #ff5d0e;*/
+	}
+	.job-item{
+		width: 340px;
+		height: 160px;
+		border: 1px solid #cccccc;
+		padding: 12px;
+		display: inline-block;
+		cursor: pointer;
+	}
+	.part-title{
+		width: 100%;
+		font-size: 18px;
+		height: 50px;
+		color: #3c3c3c;
+		display: -webkit-box;
+		text-overflow: ellipsis;
+		font-weight: 600;
+	}
+	.time-icon{
+		width: 100%;
+		height: 24px;
+		font-size: 14px;
+		color: #9c9c9c;
+		line-height: 20px;
+		white-space: nowrap;
+		margin-top: 20px;
+	}
+	.icon_img{
+		height: 16px;
+	}
+	.address-icon{
+		width: 100%;
+		height: 24px;
+		background-size: 14px 14px;
+		font-size: 14px;
+		color: #9c9c9c;
+	}
+	.address-icon:before{
+		box-sizing: border-box;
+	}
+	.down-salary{
+		width: 100%;
+		position: relative;
+		margin-top: 15px;
+	}
+	.job-salary{
+		color: #ff8000;
+		font-size: 18px;
+		float: left;
+		font-weight: 600;
+		margin-right: 10px;
+	}
+	.job-type{
+		height: 25px;
+		background: rgba(0,204,136,.1);
+		border-radius: 2px;
+		color: #1d1eff;
+		text-align: center;
+		line-height: 28px;
+		font-size: 14px;
+		padding: 0 10px;
+		float: right;
+	}
+</style>
+<style>
+	.career-planning {
+		width: 100%;
+		/*height: 500px;*/
+		/*background-color: red;*/
+	}
+	.career_title {
+		width: 1150px;
+		height: 38px;
+		font-size: 20px;
+		/*border: 1px solid #f1f1f1;*/
+		text-align: center;
+		margin: auto;
+	}
+	.career_left {
+		margin-top: 10px;
+		margin-bottom: 100px;
+		font-size: 32px;
+		font-weight: unset;
+		color: #323233;
+	}
+	/*.career_right {*/
+		/*float: right;*/
+		/*margin-top: 10px;*/
+		/*margin-bottom: 10px;*/
+	/*}*/
+	.career_content {
+		width: 100%;
+		height: 450px;
+		margin: 50px 0 0 0;
+		background-color: rgb(255, 255, 255);
+		clear: both;
+	}
+	.career_main {
+		width: 250px;
+		height: 392px;
+		border: 1px solid rgb(255, 255, 255);
+		display: inline-block;
+		float: left;
+		position: relative;
+		margin: 25px;
+		left: 70px;
+		background-color: #f1f1f1;
+        /*text-align: center;*/
+	}
+	.car_natitle {
+		color: red;
+		line-height: 32px;
+		text-align: center;
+	}
+	.carrer_navigration {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	.carrer_navigration>a {
+		position: relative;
+		margin-right: 10px;
+		padding-right: 10px;
+		line-height: 24px;
+	}
+	.carre_serise {
+		/*float: left;*/
+		/*width: 80%;*/
+		/*margin-right: 30px;*/
+		/*display: inline-block;*/
+		/*margin-left: 30px;*/
+		/*margin-top: 20px;*/
+		/*margin-bottom: 20px;*/
+		position: relative;
+		/*left: 150px;*/
+		/*border: 1px solid red;*/
+		align-content: space-between;
+        text-align: center;
+	}
+	.career_one {
+		width: 350px;
+		/*height: 200px;*/
+		background-color: rgb(255, 255, 255);
+		border: 1px solid rgb(255, 255, 255);
+		margin-left: 15px;
+		display: inline-block;
+		text-align: center;
+		/*padding: 10px;*/
+		vertical-align: top;
+		margin-bottom: 10px;
+		margin-top: 10px;
+		margin-right: 15px;
+	}
+	.career_one>img {
+		display: block;
+		margin: auto;
+	}
+	.career_one_title{
+		width: 100%;
+		position: relative;
+		/*border: 1px solid red;*/
+		background-color: #ffffff;
+		margin-top: 25px;
+	}
+	.career_one_title>a {
+		display: block;
+		/*color: white;*/
+		font-size: 20px;
+	}
+
+</style>
+<style>
+	.character {
+		width: 100%;
+		height: 540px;
+		background-image: url("https://qiniu-image.qtshe.com/20190222backlist.png");
+		background-size: 100%;
+		text-align: center;
+		margin: 0;
+	}
+	.character>h2 {
+		position: relative;
+		top: 35px;
+		letter-spacing: 32px;
+		font-size: 32px;
+		color: #ffffff;
+	}
+	.chara_title{
+		width: 80%;
+		display: none;
+		align-content: space-between;
+	}
+	.chara_logo{
+		width: 100px;
+		height: 100px;
+	}
+	.chara_logo_one{
+		width: 80px;
+		height: 80px;
+	}
+	.join {
+		position: relative;
+		width: 200px;
+		height: 28px;
+		top: 400px;
+		background-color: rgba(224,219,220,1.00);
+		margin-top: 20px;
+		margin-right: auto;
+		margin-left: auto;
+		margin-bottom: 20px;
+		border: 1px solid #d8d8d8;
+		border-radius: 4px;
+		text-align: center;
+		font-size: 16px;
+		color: #000000;
+		cursor: pointer;
+	}
+	.join:hover{
+		background-color: #26a23b;
+		color: #ffffff;
+	}
+	.join_box {
+		position: relative;
+		top: 3px;
+	}
+</style>
+<style>
+	.partner {
+		/* border: 1px solid red; */
+		text-align: center;
+		height: 250px;
+	}
+	.cooperation {
+		height: 35px;
+		width: 100%;
+		color: black;
+		font-size: 24px;
+		margin-top: 40px;
+		padding-top: 10px;
+	}
+
+	.partner_logo {
+		width: 80%;
+		margin: auto;
+		text-align: center;
+	}
+	.part_img {
+		margin-right: 30px;
+	}
+	.partner_name {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 12px;
+	}
+
+	.partner_name>span {
+		line-height: 24px;
+	}
+	.partner_first {
+		font-size: 14px;
+	}
+
+	.partner_name>a {
+		margin-right: 8px;
+		margin-left: 8px;
+		line-height: 28px;
+		cursor: pointer;
+		display: inline-block;
+	}
+	.partner_name>a:hover{
+		font-size: 14px;
+	}
+</style>
+<style>
+	.footer {
+		width: 100%;
+		height: 250px;
+		background-color: rgba(55,55,57,1.00);
+		/*border: 1px solid red;*/
+		text-align: center;
+		margin-right: 0px;
+	}
+	.footer_main {
+		position: relative;
+		top: 60px;
+		color: white;
+		/*border: 1px solid red;*/
+	}
+	.footer_logo {
+		float: left;
+		margin-left: 5%;
+		text-align: center;
+	}
+	.footer_title {
+		font-size: 30px;
+		/* [disabled]line-height: 120px; */
+		margin-bottom: 38px;
+	}
+	.company_code {
+		font-size: 12px;
+		line-height: 10px;
+		color: gray;
+	}
+	.footer_right {
+		float: right;
+		margin-right: 20px;
+	}
+	.footer_info {
+		display: inline-block;
+		font-size: 12px;
+		margin-right: 100px;
+		vertical-align: top;
+		text-align: center;
+	}
+	.footer_rule{
+		/*border: 1px solid red;*/
+		/*width: 300px;*/
+	}
+	.footer_info> span {
+		display: block;
+		line-height: 28px;
+		/*text-align: left;*/
+		color: gray;
+		cursor: pointer;
+	}
+	/*.footer_info> span:hover{*/
+		/*color: white;*/
+	/*}*/
+	.footer_info> a {
+		display: block;
+		line-height: 28px;
+		/*text-align: left;*/
+		color: gray;
+		cursor: pointer;
+	}
+	.footer_info> a:hover{
+		color: white;
+	}
+	.footer_img{
+		width: 60px;
+		display: inline-block;
+		margin-right: 5px;
+	}
+	.box_img{
+		width: 100px;
+	}
+	.focus_img{
+		width: 100px;
+	}
+	.focus_box{
+		display: none;
+		width: 160px;
+		z-index: 1000;
+		background-color: white;
+		position: fixed;
+		bottom: 200px;
+		right: 270px;
+	}
+	.footer_rule>p{
+		font-size: 12px;
+		color: #ffffff;
+		/*text-align:left;*/
+		line-height: 0;
+	}
+</style>
+<style>
+	.cultivate_train{
+		width: 100%;
+		text-align: center;
+		margin: 0px 0 120px 0;
+	}
+	.cultivate{
+		width: 90%;
+		margin: 0 auto;
+		/*border: 1px solid #4bd8ff;*/
+		position: relative;
+	}
+	.cultivate>h2{
+		font-size: 34px;
+		color: #3c3c3c;
+		line-height: 0;
+		font-weight: unset;
+	}
+	.cultivate>p{
+		font-size: 18px;
+		color: #9e9e9f;
+	}
+	.cultivate_main{
+		margin-top: 35px;
+	}
+	.cultivate_list{
+		width: 320px;
+		/*border: 1px solid red;*/
+		display: inline-block;
+		text-align: left;
+		margin-right: 10px;
+	}
+	.cultivate_title{
+		width: 100%;
+	}
+	.cul_title{
+		font-size: 22px;
+		color: #9e9e9f;
+		line-height: 36px;
+	}
+	.vate_title{
+		font-size: 18px;
+		color: #727272;
+		font-weight: bold;
+		line-height: 30px;
+	}
+	.cultivate_title>span{
+		color: #727272;
+	}
+	.cultivate_img{
+		width: 320px;
+		margin-top: 26px;
+		color: #9e9e9f;
+	}
+	.cul_image{
+		width: 320px;
+		/*height: 160px;*/
+	}
+	.listbox_list>img{
+		width: 200px;
+		border-radius: 100%;
+	}
+</style>
+<body>
+<div class="main">
+	<div class="heade">
+		<div class="heade_logo">
+			<img src="image/2085355245.jpg" alt="logo" height="45" scr="#"/>
+		</div>
+		<div class="heade_nav">
+			<a href="index.html">首页</a>
+			<a href="articles.html">新闻</a>
+			<a href="aboutus.html">关于我们</a>
+			<!--<div class="applet_main" onmouseover="appletin()" onmouseout="appletOut()">小程序</div>-->
+			<!--<script>-->
+                <!--function appletin(){-->
+                    <!--document.getElementById("applet_codes").style.display="block";-->
+                <!--}-->
+                <!--function appletOut(){-->
+                    <!--document.getElementById("applet_codes").style.display="none";-->
+                <!--}-->
+			<!--</script>-->
+			<div class="applet_code" id="applet_codes">
+				<div class="code_content">
+					<img src="image/mmexport1553406187374.jpg" alt="QR code" class="code_img"/>
+					<span>微信扫码更多兼职信息</span>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- 	<div class="banner">
+		<img src="image/495249664.jpg" class="banner_img"/>
+		<!--<div class="banner_main">-->
+			<!--<div class="new">-->
+				<!--<p>变化我今年紧急救护我积极机密不仅已胡恍恍惚惚回鹘</p>-->
+				<!--<p>变化我今年紧急救护我积极机密不仅已胡恍恍惚惚回鹘</p>-->
+				<!--<p>变化我今年紧急救护我积极机密不仅已胡恍恍惚惚回鹘</p>-->
+				<!--<p>变化我今年紧急救护我积极机密不仅已胡恍恍惚惚回鹘</p>-->
+			<!--</div>-->
+			<!--<div class="slogan">-->
+				<!--<span class="slogan_title">卡片校园</span>-->
+				<!-- <span class="slogan_english">&#45;&#45;CARD CAMPUS&#45;&#45;</span> </div> -->
+			<!--<div class="log">-->
+				<!--<div class="register">-->
+					<!--<p></p>-->
+					<!--<img src="#" alt="log" class="log_in"/>-->
+					<!--<div class="logo_button">-->
+						<!--<div></div>-->
+						<!--<div></div>-->
+					<!--</div>-->
+					<!--<div class="state"></div>-->
+				<!--</div>-->
+			<!--</div>-->
+		<!--</div>-->
+	</div> -->
+	<div id="jssor_1" style="position:relative;margin:0 auto;top:100px;left:0px;width:1320px;height:540px; overflow:hidden;visibility:hidden;"> 
+
+		<div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);"> 
+			<img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
+		</div>
+		<div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:1320px;height:540px;overflow:hidden;">
+				<div data-p="170.00"> <img data-u="image" src="image/495249664.jpg" /> </div>
+
+				<div data-p="170.00"> <img data-u="image" src="image/bann1.jpg" /> </div>
+				<div data-p="170.00"> <img data-u="image" src="image/mmexport1555592967658.jpg" /> </div>
+				<div data-p="170.00"> <img data-u="image" src="image/webwxgetmsgimg (1).jpg" /> </div>
+				<div data-p="170.00"> <img data-u="image" src="image/微信图片_20190512233147.jpg" /> </div>
+		</div>
+		<div data-u="navigator" class="jssorb051" style="position:absolute;bottom:12px;right:12px;" data-autocenter="1" data-scale="0.5" data-scale-bottom="0.75">
+			<div data-u="prototype" class="i" style="width:16px;height:16px;">
+				<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+					<circle class="b" cx="8000" cy="8000" r="5800"></circle>
+				</svg>
+			</div>
+		</div>
+
+		<div data-u="arrowleft" class="jssora051" style="width:55px;height:55px;top:0px;left:25px;" data-autocenter="2" data-scale="0.75" data-scale-left="0.75">
+			<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+			<polyline class="a" points="11040,1920 4960,8000 11040,14080 "></polyline>
+			</svg>
+		</div>
+		<div data-u="arrowright" class="jssora051" style="width:55px;height:55px;top:0px;right:25px;" data-autocenter="2" data-scale="0.75" data-scale-right="0.75">
+			<svg viewbox="0 0 16000 16000" style="position:absolute;top:0;left:0;width:100%;height:100%;">
+			<polyline class="a" points="4960,1920 11040,8000 4960,14080 "></polyline>
+			</svg>
+		</div>
+	</div>
+	<script type="text/javascript">jssor_1_slider_init();</script> 
+
+	<div class="feature" style="position: relative;height: 350px;margin-top: 230px; background-color: #ffffff;border-bottom: 1px solid #ffffff;color: #323233;">
+        <section class="">
+            <div class="container">
+                <div style="margin-top:130px;margin-bottom: 60px;">
+                    <h2 style="visibility: inherit; opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);font-size: 38px;line-height: 0;font-weight: unset;letter-spacing: 5px;font-family: ">大学生优质安全高端的兼职</h2>
+                </div>
+                <ul style="background-color: #ffffff; margin: auto; padding: 0;">
+                    <div>
+                        <div role="listbox" style="opacity: 1; transform: translate3d(0px, 0px, 0px); margin: auto;">
+                            <li class="listbox_list" style="text-align: center;" tabindex="-1" role="option" aria-describedby="slick-slide00" data-slick-index="0" aria-hidden="false">
+                                <img src="image/mmexport1555591638669.jpg" alt="改掉贪玩坏毛病">
+                                <div style="height: 50px;"></div>
+                                <!--<h4>高端</h4>-->
+                            </li>
+                            <li class="listbox_list" style="text-align: center;"  tabindex="-1" role="option" aria-describedby="slick-slide01" data-slick-index="1" aria-hidden="false">
+                                <img src="image/mmexport1555593567778.jpg" alt="拒绝成绩偏科">
+								<div style="height: 50px;"></div>
+								<!--<h4>高效</h4>-->
+
+                            </li>
+							<li class="listbox_list" style="text-align: center;" tabindex="-1" role="option" aria-describedby="slick-slide00" data-slick-index="0" aria-hidden="false">
+								<img src="image/mmexport1555591634047.jpg" alt="改掉贪玩坏毛病">
+								<div style="height: 50px;"></div>
+								<!--<h4>安全</h4>-->
+							</li>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </section>
+		<!--<div class="feature_content">-->
+			<!--<div class="feature_describe"></div>-->
+			<!--<div class="feature_describe"></div>-->
+			<!--<div class="feature_describe"></div>-->
+		<!--</div>-->
+		<div class=" ">
+			<div></div>
+		</div>
+	</div>
+	<!-- --------------------------------------------------------------------库尔班  新闻栏目----------------------------------------------- -->
+	<div id="NewContainer">
+		<div id="NewContainerTitle">
+			<p>新闻动态</p>
+		</div>
+		<div id="NewContainerContent">
+			<ul>
+				<li class="metMore" style="border-right: 1px solid #dddddd; border-bottom: 1px solid #dddddd; "> <img src="image/1557596385.jpg"><a href="articles.html#moreNewsKurban" title="天南大同学参与录制《挑战不可能》" target="_self"> 天南大同学参与录制《挑战不可能》</a></li>
+				<li class="metMore" style="border-right: 1px solid #dddddd; border-bottom: 1px solid #dddddd; "> <img src="image/1557596385.jpg"><a href="articles.html#moreNewsKurban" title="春天里，享受团建的欣喜" target="_self"> 春天里，享受团建的欣喜</a></li>
+				<li class="metMore" style="border-right: 1px solid #dddddd; border-bottom: 1px solid #dddddd; "> <img src="image/1557596385.jpg"><a href="articles.html#moreNewsKurban" title="跟着小卡一起去做公益吧" target="_self"> 跟着小卡一起去做公益吧</a></li>
+				<li class="metMore" style="border-right: 1px solid #dddddd; border-bottom: 1px solid #dddddd; "> <img src="image/1557596385.jpg"><a href="articles.html#moreNewsKurban" title="像我这样的人开会装不了深沉" target="_self"> 像我这样的人开会装不了深沉</a></li>
+				<li class="metMore" style=" border-bottom: 1px solid #dddddd; "> <img src="image/1557596385.jpg"><a href="articles.html#moreNewsKurban" title="有的人错过了就是一辈子" target="_self"> 有的人错过了就是一辈子</a></li>
+			</ul>
+			<ul>
+				
+			</ul>
+		</div>
+	</div>
+
+	<!-- ---------------------------------------------------------------------新闻栏目结束-------------------------------------------------- -->
+
+	<div class="about_us" style="width: 100%;">
+		<div class="us_main" style="width: 100%;text-align: center;margin: auto;">
+			<div class="us_image" style="margin: 0;">
+				<img src="image/134271362.jpg" style="width: 100%;"/>
+			</div>
+			<div>
+				<span></span>
+			</div>
+		</div>
+	</div>
+	<!--<div style="text-align: center;">-->
+		<!--<img src="image/362200217.jpg">-->
+	<!--</div>-->
+	<div class="partner" style="height: 500px;margin-top: -90px;">
+		<div style="clear: both;">
+			<div class="cooperation" style="height: 70px;">
+				<a style="font-size: 36px;">合作伙伴</a>
+			</div>
+			<img src="image/mmexport1555592967658.jpg" width="1200px">
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="footer_main">
+			<div class="footer_logo">
+				<div class="footer_title">卡片校园 card campus</div>
+				<p class="company_code">免责声明：本站只提供资源播放平台，如果站内部分资源侵犯您的权益，请您告知，我们会立即处理。</p>
+				<p class="company_code">Copyright @2019 天津悦狐网络科技有限公司 /津ICP备19001737号-1</p>
+			</div>
+			<div class="footer_right">
+				<div class="foooter_about footer_info">
+					<h3>关于我们</h3>
+					<a>公司介绍</a>
+					<a>常见问题</a>
+					<a>服务协议</a>
+				</div>
+				<div class="footer_attention footer_info">
+					<h3>关注我们</h3>
+					<div onmouseover="appletIn()" onmouseout="appletOut()" style="cursor: pointer;color: #a0a0a1;margin-bottom: 10px;">公众号</div>
+					<!-- <div style="margin-top: 15px;" ><a style="cursor: pointer;color: #a0a0a1;" href="join_us.html">团队成员</a></div> -->
+					<a href="join_us.html">团队成员</a>
+				</div>
+				<div id="focus_box1" class="focus_box">
+					<div class="box_img">
+						<img src="image/mmexport1553406187374.jpg" style="width: 160px;"/>
+					</div>
+				</div>
+				<script>
+                    function appletIn(){
+                        document.getElementById("focus_box1").style.display="block";
+                    }
+                    function appletOut(){
+                        document.getElementById("focus_box1").style.display="none";
+                    }
+				</script>
+				<div class="footer_rule footer_info">
+					<h3>联系我们</h3>
+					<a>联系电话</a>
+					<a>13612063173</a>
+					<a>客服邮箱</a>
+					<a>kapianxiaoyuan@163.com</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+</div>
+</body>
+</html>

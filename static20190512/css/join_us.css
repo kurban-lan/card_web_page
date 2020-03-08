@@ -1,0 +1,83 @@
+body{
+	margin: 0px;
+}
+#kurban{
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    padding: 0px;
+    margin: 0px auto;
+    /*border: 1px solid red;*/
+}
+
+.heade {
+    /*width: 1503px;*/
+    width: 100%;
+    min-width: 1200px;
+    height: 65px;
+    background-color: #FFFFFF;
+    z-index: 999;
+    position: fixed;
+    -webkit-box-shadow: 0 2px 4px #C0C0C0;
+    box-shadow: 0 2px 4px #C0C0C0;
+    margin-top: 0;
+    top: 0;
+}
+.heade_logo {
+    float: left;
+    margin-left: 100px;
+    height: 60px;
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+.heade_nav {
+    float: right;
+    margin-right: 130px;
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 0;
+}
+.heade_nav>a {
+    text-decoration: none;  
+    color: #000;
+    margin-right: 35px;
+    font-size: 18px;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
+}
+.heade_nav>a:hover {
+    color: #000000;
+    font-size: 18px;
+    background-color: white;
+}
+
+
+#heart{
+    /*background-image:url('/image/495249664.jpg');*/
+    background: #FBF2E9;
+    width: 100%;
+    margin:0px;
+    /*border: 2px solid #000;*/
+}
+#heart table{
+    margin: auto;
+}
+#heart tr{
+}
+.class_heart_th{
+    border: 1px solid #E8E8E8;
+    padding: 3px;
+    width: 82px;
+}
+.class_heart_th img{
+    width: 82px;
+}
+#twoHeart table{
+    width: 100%;
+    margin:0px;
+}
+#twoHeart table{
+    margin:auto;
+}

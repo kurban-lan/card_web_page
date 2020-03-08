@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>优质文章</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            min-width: 1200px;
+            height: auto;
+        }
+        a{
+            text-decoration: none;
+        }
+        .heade {
+            width: 100%;
+            min-width: 1200px;
+            height: 80px;
+            background-color: #FFFFFF;
+            z-index: 999;
+            position: fixed;
+            -webkit-box-shadow: 0 2px 4px #C0C0C0;
+            box-shadow: 0 2px 4px #C0C0C0;
+            margin-top: 0;
+            top: 0;
+        }
+
+        .heade_logo {
+            float: left;
+            margin-left: 100px;
+            height: 60px;
+            text-align: center;
+            margin-top: 16px;
+            margin-bottom: 16px;
+        }
+        .heade_nav {
+            float: right;
+            margin-right: 130px;
+            text-align: center;
+            margin-top: 25px;
+            margin-bottom: 0;
+        }
+        .heade_nav>a {
+            margin-right: 35px;
+            font-size: 18px;
+            margin-top: auto;
+            margin-bottom: auto;
+            cursor: pointer;
+        }
+        .heade_nav>a:hover {
+            color: #000000;
+            font-size: 20px;
+            background-color: white;
+        }
+        .applet_main:hover{
+            color: #000000;
+            font-size: 20px;
+            background-color: white;
+        }
+        .applet_main{
+            display: inline-block;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .applet_code {
+            position: fixed;
+            top: 69px;
+            right: 130px;
+            width: 250px;
+            height: 250px;
+            background-color: #FFFFFF;
+            text-align: center;
+            z-index: 999;
+            display: none;
+        }
+        .code_content {
+            /*margin: auto;*/
+            margin-top: 10px;
+            text-align: center;
+            height: auto;
+            width: auto;
+            right: auto;
+        }
+        .code_img {
+            width: 200px;
+            height: 200px;
+        }
+        .code_content>span {
+            font-size: 14px;
+            display: block;
+            /*margin-top: 10px;*/
+        }
+    </style>
+    <style>
+        .banner {
+            height: 580px;
+        }
+        .banner_img  {
+            width: 100%;
+            margin: 0;
+            height: 580px;
+            position: relative;
+            z-index: -10;
+        }
+        .banner_main {
+            margin-top: -350px;
+            top: -400px;
+            text-align: center;
+            left: auto;
+            color: #FFFFFF;
+            font-size: 12px;
+            /*border: 1px solid red;*/
+            width: 100%;
+        }
+        .slogan_title {
+            font-size: 68px;
+            display: block;
+            letter-spacing: 20px;
+        }
+        .slogan_english {
+            font-size: 20px;
+            display: block;
+            line-height: 32px;
+        }
+        .new {
+            display: none;
+            height: 300px;
+            width: 250px;
+            position: absolute;
+            left: 8%;
+            color: black;
+            font-size: 18px;
+            background-color: rgb(190,232,226);
+            -webkit-box-shadow: 2px 2px 2px rgb(170,224,224);
+            box-shadow: 2px 2px 2px rgb(170,224,224);
+        }
+        .log {
+            display: none;
+            height: 300px;
+            width: 250px;
+            position: absolute;
+            color: black;
+            font-size: 18px;
+            background-color: rgba(255,255,255,1.00);
+            -webkit-box-shadow: 4px 4px 4px gray;
+            box-shadow: 4px 4px 4px gray;
+            right: 10%;
+            top: 240px;
+        }
+    </style>
+    <style>
+        .articles_navigration{
+            height: 20px;
+            background-color: white;
+            color: #ff5d0e;
+            font-size: 16px;
+        }
+        .articles{
+            background-color: #f7f7f8;
+            height: 3000px;
+        }
+        .articles_main{
+            width: 85%;
+            background-color: #ffffff;
+            margin: auto;
+            border: 1px solid #d8d8d8;
+        }
+        .articles_information {
+            text-align: left;
+            height: 100px;
+            width: 100%;
+            margin-left: 10px;
+            padding-top: 20px;
+        }
+        .articles_title{
+            line-height: 14px;
+        }
+        .articles_time{
+
+        }
+        .articles_essay{
+            border-top: 2px solid #d8d8d8;
+            font-size: 18px;
+            color: #6c6c6c;
+            line-height: 30px;
+        }
+    </style>
+</head>
+<body>
+<div class="heade">
+    <div class="heade_logo">
+        <img src="image/1535439215.png" alt="logo" height="45" scr="#"/>
+    </div>
+    <div class="heade_nav">
+        <a>首页</a><a>兼职</a><a>培训</a><a>职业规划</a><a>企业合作</a><a>关于我们</a>
+        <div class="applet_main" onmouseover="appletin()" onmouseout="appletOut()">小程序</div>
+        <script>
+            function appletin(){
+                document.getElementById("applet_codes").style.display="block";
+            }
+            function appletOut(){
+                document.getElementById("applet_codes").style.display="none";
+            }
+        </script>
+        <div class="applet_code" id="applet_codes">
+            <div class="code_content">
+                <img src="image/mmexport1553406187374.jpg" alt="QR code" class="code_img"/>
+                <span>微信扫码更多兼职信息</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="banner">
+    <img src="image/1553410965.jpg" class="banner_img"/>
+    <!--<div class="banner_main">-->
+    <!--<div class="new">-->
+    <!--<p>变化我今年紧急救护我积极机密不仅已胡恍恍惚惚回鹘</p>-->
+    <!--<p>变化我今年紧急救护我积极机密不仅已胡恍恍惚惚回鹘</p>-->
+    <!--<p>变化我今年紧急救护我积极机密不仅已胡恍恍惚惚回鹘</p>-->
+    <!--<p>变化我今年紧急救护我积极机密不仅已胡恍恍惚惚回鹘</p>-->
+    <!--</div>-->
+    <!--<div class="slogan">-->
+    <!--<span class="slogan_title">卡片校园</span>-->
+    <!--<span class="slogan_english">&#45;&#45;CARD CAMPUS&#45;&#45;</span> </div>-->
+    <!--<div class="log">-->
+    <!--<div class="register">-->
+    <!--<p></p>-->
+    <!--<img src="#" alt="log" class="log_in"/>-->
+    <!--<div class="logo_button">-->
+    <!--<div></div>-->
+    <!--<div></div>-->
+    <!--</div>-->
+    <!--<div class="state"></div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+</div>
+<div class="articles_navigration">
+    <span>网站首页</span><span>&nbsp/&nbsp</span>
+    <span>优质文章</span><span>&nbsp/&nbsp</span>
+    <span>兼职面经</span>
+</div>
+<div class="articles">
+    <div class="articles_main">
+        <div class="articles_information">
+            <h2 class="articles_title">"老司机"也违规？驾校教练违规占应急车道被查处</h2>
+            <span class="articles_time">2018-08-03 18:42:22</span>
+            <span class="articles_time"></span>
+            <span class="articles_time">3</span>
+        </div>
+        <div class="articles_essay">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                2月23讯，今日上午，四川高速交警四支队五大队来了一个来处理违章的驾驶员，只是，这位驾驶员的身份有点儿“特殊”。 这位名叫郑某的驾驶员是来自成都某驾驶学校的教练，他于2月21日在乐雅高速上因违规占用应急车道被巡逻民警当场查获。他将面临记6分，罚款200元的处罚，同时，因为持有的A2驾照，之前因其他违法被记10分，因此还将被注销其最高准驾车型。
+            </p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                据四川高速交警四支队五大队民警介绍，21日下午，郑某驾驶教练车搭乘亲戚从成都温江站上高速准备去峨眉山玩。当天15时许，当行驶至乐雅高速K803处时，因车上人员内急需要尿尿，郑某就将车停在了应急车道上，不料被路上巡逻的民警抓了个“现行”。
+            </p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                民警对郑某进行了现场教育，并要求其立即下站接受进一步处理。郑某因非紧急情况下在高速公路应急车道上停车的行为，根据《道路交通安全法》相关规定，郑某某被处以记6分，罚款200元的处罚。由于郑某某之前已因其他违法被记10分且其持有的是“A2”的驾驶证，根据规定，持有“A2”驾驶证在一个记分周期内记分达到12分的，将被注销其最高准驾车型。
+            </p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                民警提示：郑某作为机动车驾驶教练，本应以身作则，为学员树立良好的学习榜样，在实际驾驶中却起到了反作用，希望广大教练员引以为戒，切勿重蹈覆辙。
+            </p>
+        </div>
+        <div class="articles_other"></div>
+    </div>
+</div>
+</body>
+</html>
